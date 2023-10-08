@@ -79,11 +79,6 @@ public class ExploreView extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Poppins Medium", 0, 16)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(250, 250, 250));
         jLabel6.setText("Logout");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
-            }
-        });
 
         jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\mfazi\\OneDrive\\Documents\\NetBeansProjects\\Arisanku\\src\\main\\assets\\logout.png")); // NOI18N
 
@@ -158,11 +153,6 @@ public class ExploreView extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Poppins Medium", 0, 16)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(250, 250, 250));
         jLabel5.setText("Your Arisan");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
 
         jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\mfazi\\OneDrive\\Documents\\NetBeansProjects\\Arisanku\\src\\main\\assets\\lottery.png")); // NOI18N
 
@@ -376,10 +366,6 @@ public class ExploreView extends javax.swing.JPanel {
         app.showExploreView();
     }//GEN-LAST:event_exploreMenuMouseClicked
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        
-    }//GEN-LAST:event_jLabel5MouseClicked
-
     private void leaderboardMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leaderboardMenuMouseClicked
         app.showLeaderboardView();
     }//GEN-LAST:event_leaderboardMenuMouseClicked
@@ -391,10 +377,6 @@ public class ExploreView extends javax.swing.JPanel {
     private void yourArisanMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_yourArisanMenuMouseClicked
         app.showYourArisanView();
     }//GEN-LAST:event_yourArisanMenuMouseClicked
-
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-
-    }//GEN-LAST:event_jLabel6MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

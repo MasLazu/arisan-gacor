@@ -16,7 +16,6 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 public class ArisanDetailView extends javax.swing.JPanel {
-
     private App app;
     private Arisan arisan;
 
@@ -225,11 +224,6 @@ public class ArisanDetailView extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Poppins Medium", 0, 16)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(250, 250, 250));
         jLabel5.setText("Your Arisan");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
 
         jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\mfazi\\OneDrive\\Documents\\NetBeansProjects\\Arisanku\\src\\main\\assets\\lottery.png")); // NOI18N
 
@@ -303,11 +297,6 @@ public class ArisanDetailView extends javax.swing.JPanel {
         jLabel9.setFont(new java.awt.Font("Poppins Medium", 0, 16)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(250, 250, 250));
         jLabel9.setText("Profile");
-        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel9MouseClicked(evt);
-            }
-        });
 
         jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\mfazi\\OneDrive\\Documents\\NetBeansProjects\\Arisanku\\src\\main\\assets\\profile-user.png")); // NOI18N
 
@@ -544,11 +533,6 @@ public class ArisanDetailView extends javax.swing.JPanel {
                 actionButtonMouseClicked(evt);
             }
         });
-        actionButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                actionButtonActionPerformed(evt);
-            }
-        });
 
         jLabel24.setFont(new java.awt.Font("Poppins SemiBold", 0, 16)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(51, 51, 51));
@@ -624,10 +608,6 @@ public class ArisanDetailView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void actionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_actionButtonActionPerformed
-
     private void actionButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionButtonMouseClicked
         String action = actionButton.getText();
         boolean inSeason = arisan.getDuringSession();
@@ -678,10 +658,6 @@ public class ArisanDetailView extends javax.swing.JPanel {
         app.showExploreView();
     }//GEN-LAST:event_exploreMenuMouseClicked
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        app.showYourArisanView();
-    }//GEN-LAST:event_jLabel5MouseClicked
-
     private void leaderboardMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_leaderboardMenuMouseClicked
         app.showLeaderboardView();
     }//GEN-LAST:event_leaderboardMenuMouseClicked
@@ -693,10 +669,6 @@ public class ArisanDetailView extends javax.swing.JPanel {
     private void yourArisanMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_yourArisanMenuMouseClicked
         app.showYourArisanView();
     }//GEN-LAST:event_yourArisanMenuMouseClicked
-
-    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        app.showProfileView();
-    }//GEN-LAST:event_jLabel9MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -46,7 +46,7 @@ public class LoginView extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        registerBtn = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setBorder(javax.swing.BorderFactory.createEmptyBorder(20, 20, 20, 20));
@@ -62,11 +62,7 @@ public class LoginView extends javax.swing.JPanel {
                 loginBtnMouseClicked(evt);
             }
         });
-        loginBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginBtnActionPerformed(evt);
-            }
-        });
+
         loginBtn.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 loginBtnKeyPressed(evt);
@@ -87,12 +83,12 @@ public class LoginView extends javax.swing.JPanel {
         jLabel3.setText("Login");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel5.setFont(new java.awt.Font("Poppins SemiBold", 0, 14)); // NOI18N
-        jLabel5.setText("Register");
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        registerBtn.setFont(new java.awt.Font("Poppins SemiBold", 0, 14)); // NOI18N
+        registerBtn.setText("Register");
+        registerBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        registerBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
+                registerBtnMouseClicked(evt);
             }
         });
 
@@ -119,7 +115,7 @@ public class LoginView extends javax.swing.JPanel {
                                 .addGap(45, 45, 45)
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel5))
+                                .addComponent(registerBtn))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(114, 114, 114)
                                 .addComponent(jLabel3)))
@@ -143,19 +139,15 @@ public class LoginView extends javax.swing.JPanel {
                 .addComponent(loginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(registerBtn)
                     .addComponent(jLabel6))
                 .addGap(51, 51, 51))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginBtnActionPerformed
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+    private void registerBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerBtnMouseClicked
         app.showRegisterView();
-    }//GEN-LAST:event_jLabel5MouseClicked
+    }//GEN-LAST:event_registerBtnMouseClicked
 
     private void loginBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnMouseClicked
         if (login()) 
@@ -177,8 +169,8 @@ public class LoginView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JButton loginBtn;
+    private javax.swing.JLabel registerBtn;
     // End of variables declaration//GEN-END:variables
 }

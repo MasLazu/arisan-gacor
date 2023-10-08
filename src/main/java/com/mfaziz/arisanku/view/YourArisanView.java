@@ -234,11 +234,6 @@ public class YourArisanView extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Poppins Medium", 0, 16)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(250, 250, 250));
         jLabel5.setText("Your Arisan");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
-            }
-        });
 
         jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\mfazi\\OneDrive\\Documents\\NetBeansProjects\\Arisanku\\src\\main\\assets\\lottery.png")); // NOI18N
 
@@ -444,10 +439,6 @@ public class YourArisanView extends javax.swing.JPanel {
     private void exploreMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exploreMenuMouseClicked
         app.showExploreView();
     }//GEN-LAST:event_exploreMenuMouseClicked
-
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-        
-    }//GEN-LAST:event_jLabel5MouseClicked
 
     private void yourArisanMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_yourArisanMenuMouseClicked
         app.showYourArisanView();
