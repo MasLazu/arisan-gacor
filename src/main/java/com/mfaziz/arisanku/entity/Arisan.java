@@ -10,7 +10,7 @@ public class Arisan {
     private int price;
     private int prize;
     private final ArrayList<User> members;
-    private boolean duringSeason;
+    private boolean duringSession;
     private final ArrayList<User> notWonYet;
 
     public Arisan(String name, int price, User admin) {
@@ -20,7 +20,7 @@ public class Arisan {
         this.prize = 0;
         members = new ArrayList<>();
         notWonYet = new ArrayList<>();
-        duringSeason = false;
+        duringSession = false;
         members.add(admin);
         generateId();
         calculatePrize();
@@ -80,16 +80,16 @@ public class Arisan {
     }
 
     public void addMember(User newMember) throws Exception {
-        if (duringSeason)
-            throw new Exception("can't join arisan during season, comeback later :)");
+        if (duringSession)
+            throw new Exception("can't join arisan during session, comeback later :)");
         
         members.add(newMember);
         calculatePrize();
     }
 
     public void removeMember(User user) throws Exception {
-        if (duringSeason)
-            throw new Exception("can't live during season");
+        if (duringSession)
+            throw new Exception("can't live during session");
         
         if(!members.remove(user))
             throw new Exception("failed to remove member");
@@ -102,20 +102,20 @@ public class Arisan {
     }
 
     public void startSeason() throws Exception {
-        if (duringSeason) 
-            throw new Exception("already in sesason");
+        if (duringSession) 
+            throw new Exception("already in session");
         
-        duringSeason = true;
+        duringSession = true;
         for (User member : members)
             notWonYet.add(member);
     }
 
     public boolean getDuringSession() {
-        return duringSeason;
+        return duringSession;
     }
     
     public void setPrice(int price) throws Exception {
-        if(duringSeason) 
+        if(duringSession) 
             throw new Exception("cannot set price durring session");
         
         if(price<=0)
@@ -126,8 +126,8 @@ public class Arisan {
     }
 
     public String draw() throws Exception {
-        if (!duringSeason) 
-            throw new Exception("season not started yet");
+        if (!duringSession) 
+            throw new Exception("session not started yet");
         
         for(User member: members) {
             if(member.getBalance()<price) 
@@ -143,7 +143,7 @@ public class Arisan {
         winner.deposit(prize, "Winning " + name + " arisan");
         notWonYet.remove(index);
         
-        if(notWonYet.isEmpty()) duringSeason = false;
+        if(notWonYet.isEmpty()) duringSession = false;
         
         return winner.username;
     }

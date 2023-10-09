@@ -32,7 +32,7 @@ public class ArisanDetailView extends javax.swing.JPanel {
         totalMemberLabel.setText(": " + arisan.getTotalMember());
         prizeLabel.setText(": " + arisan.getPrize());
         priceLabel.setText(": " + arisan.getPrice());
-        statusLabel.setText(": " + (arisan.getDuringSession()? "during seasion" : "not in season"));
+        statusLabel.setText(": " + (arisan.getDuringSession()? "during session" : "not in session"));
 
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         model.getDataVector().removeAllElements();
@@ -47,7 +47,7 @@ public class ArisanDetailView extends javax.swing.JPanel {
 
             String status = "don't know why you ask me";
             if (!arisan.getDuringSession()) {
-                status = "not in season";
+                status = "not in session";
             } else {
                 try {
                     boolean haveWon = arisan.isUserWon(member);
@@ -71,7 +71,7 @@ public class ArisanDetailView extends javax.swing.JPanel {
             if (arisan.getDuringSession()) {
                 actionButton.setText("Draw");
             } else {
-                actionButton.setText("Start Season");
+                actionButton.setText("Start Session");
             }
 
             actionButton.setBackground(new Color(224, 223, 130));
@@ -616,7 +616,7 @@ public class ArisanDetailView extends javax.swing.JPanel {
                 arisan.addMember(app.currentUser);
             } else if (action.equals("Leave")) {
                 arisan.removeMember(app.currentUser);
-            } else if (action.equals("Start Season")) {
+            } else if (action.equals("Start Session")) {
                 arisan.startSeason();
             } else if (action.equals("Draw")) {
                 String winnerName = arisan.draw();
